@@ -52,20 +52,29 @@ public class HomeController {
 	@PostMapping("add_movie")
 	public String addMovie(Movie movie) {
 		
-		movieRepo.save(movie);
+		if(movie.getTitle() != null) {
+			movieRepo.save(movie);
+			
+			return "Movie added successfully";
+		}
 		
-		return "Movie added successfully";
+		return "Please enter valid values for movie title & category"; 
 	}
 	
 	@PutMapping("update_movie_cat")
-	public String updateMovieCategory(int id, String category) {
+	public String updateMovieCategory(Integer id, String category) {
 		
-		Movie movie = movieRepo.findById(id).get();
+		if(id != null && category != null) {
+			Movie movie = movieRepo.findById(id).get();
+			
+			movie.setCategory(category);
+			movieRepo.save(movie);
+			
+			return "Movie's category has been updated successfully";
+		}
 		
-		movie.setCategory(category);
-		movieRepo.save(movie);
+		return "Please enter valid values for movie id & category";
 		
-		return "Movie's category has been updated successfully";
 	}	
 	
 	private <T> void printToConsole(List<T> list, String listParamType) {
