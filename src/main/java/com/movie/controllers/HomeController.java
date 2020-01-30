@@ -74,7 +74,7 @@ public class HomeController {
 		System.out.println("---------------------------------------");
 		list.forEach(listItem -> System.out.println(listItem)); // lambda expression
 		
-		System.out.println("\nPrinting movies starting with a letter 'A' ");
+		System.out.println("\nPrinting list of movies starting with a letter 'A' ");
 		System.out.println("---------------------------------------");
 		if(listParamType == "RentedMoviesView")
 			list.stream().filter(s -> (((RentedMoviesView)s).getRentedmoviename()).
@@ -82,10 +82,5 @@ public class HomeController {
 		else
 			list.stream().filter(s -> (((AllMoviesView)s).getRentedmoviename()).
 											startsWith("A")).forEach(System.out::println);
-		
-//		System.out.println("\n");
-//		System.out.println("Printing the list using CALL BY METHOD (method references): ");
-//		System.out.println("---------------------------------------");
-//		list.forEach(System.out::println); // call by Method 
 	}
 }
