@@ -1,7 +1,7 @@
 # Movierentals
 Movie Rentals Application
 
-1. Spring Boot Project (Boot version: 2.2.4 & Java version: 1.8)
+1. Spring Boot Project (Boot version: 2.2.2 & Java version: 1.8)
 2. Get, Post & Put rest end points.
 3. Utilized Spring Data JPA for data access layer 
 4. Implemented joins (inner, right) using Query DSL within Repo class
