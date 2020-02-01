@@ -64,17 +64,16 @@ public class HomeController {
 	@PutMapping("update_movie_cat")
 	public String updateMovieCategory(Integer id, String category) {
 		
-		if(id != null && category != null) {
+		try {
 			Movie movie = movieRepo.findById(id).get();
 			
 			movie.setCategory(category);
 			movieRepo.save(movie);
 			
 			return "Movie's category has been updated successfully";
-		}
-		
-		return "Please enter valid values for movie id & category";
-		
+		} catch (Exception e) {
+			return "Please enter valid values for movie id & category";
+		}	
 	}	
 	
 	private <T> void printToConsole(List<T> list, String listParamType) {
