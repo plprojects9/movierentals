@@ -1,4 +1,4 @@
-# Movierentals2
+# Movierentals
 Movie Rentals Application
 
 1. Spring Boot Project (Boot version: 2.2.4 & Java version: 1.8)
