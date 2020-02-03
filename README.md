@@ -5,7 +5,7 @@ Movie Rentals is a Spring Boot Rest Project. In this project there are 4 rest en
 1. Fetch rented movies list using GET request
 2. Fetch rented movies along with non-rented movies using GET request
 3. Add a new movie using POST request
-4. Update a new movie using PUT request
+4. Update a movie using PUT request
 
 Project Highlights:
 * Spring Boot Project (Boot version: 2.2.4 & Java version: 1.8)
